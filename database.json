@@ -2,7 +2,6 @@
   "dev": {
     "driver": "pg",
     "host": "127.0.0.1",
-    "port": 5432,
     "database": "storefront",
     "user": "admin",
     "password": "123456"
@@ -10,8 +9,7 @@
   "test": {
     "driver": "pg",
     "host": "127.0.0.1",
-    "port": 5433,
-    "database": "storefront",
+    "database": "storefront_test",
     "user": "admin",
     "password": "123456"
   }

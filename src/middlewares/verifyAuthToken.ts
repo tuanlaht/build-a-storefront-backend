@@ -4,8 +4,8 @@ import { Request, Response, NextFunction } from 'express'
 export const verifyAuthToken = (req: Request, res: Response, next: NextFunction) => {
   try {
     const authorizationHeader: string | undefined = req.headers.authorization
-    const token = authorizationHeader ? authorizationHeader.split(' ')[1] : ''
-    jsonwebtoken.verify(token, process.env.TOKEN_SECRET as Secret)
+    const token = authorizationHeader ? authorizationHeader : ''
+    jsonwebtoken.verify(token, process.env.TOKEN_KEY as Secret)
 
     next()
   } catch (error) {
